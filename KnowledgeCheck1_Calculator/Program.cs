@@ -51,7 +51,7 @@ namespace KnowledgeCheck1_Calculator
                     break;
 
                 case "2":
-                    success = Getnumbers("add", out int subnum1, out int subnum2);
+                    success = Getnumbers("Subtract", out int subnum1, out int subnum2);
                     if (success == true)
 
                     {
@@ -61,7 +61,7 @@ namespace KnowledgeCheck1_Calculator
                     break;
 
                 case "3":
-                    success = Getnumbers("add", out int mulnum1, out int mulnum2);
+                    success = Getnumbers("Multiply", out int mulnum1, out int mulnum2);
                     if (success == true)
 
                     {
@@ -71,7 +71,7 @@ namespace KnowledgeCheck1_Calculator
                     break;
 
                 case "4":
-                    success = Getnumbers("add", out int divnum1, out int divnum2);
+                    success = Getnumbers("Devide", out int divnum1, out int divnum2);
                     if (success == true)
 
                     {
