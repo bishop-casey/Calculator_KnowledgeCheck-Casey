@@ -75,7 +75,7 @@ namespace KnowledgeCheck1_Calculator
                     if (success == true)
 
                     {
-                        Console.Write($"{divnum1} + {divnum2} = ");
+                        Console.Write($"{divnum1} / {divnum2} = ");
                         Console.Write(calculator.Divide(divnum1, divnum2));
                     }
                     break;
