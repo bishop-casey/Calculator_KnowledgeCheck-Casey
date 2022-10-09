@@ -71,7 +71,7 @@ namespace KnowledgeCheck1_Calculator
                     break;
 
                 case "4":
-                    success = Getnumbers("Devide", out int divnum1, out int divnum2);
+                    success = Getnumbers("Divide", out int divnum1, out int divnum2);
                     if (success == true)
 
                     {
