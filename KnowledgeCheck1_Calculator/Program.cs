@@ -19,57 +19,45 @@ namespace KnowledgeCheck1_Calculator
             switch (input)
             {
                 case "1":
-                    Console.WriteLine("Enter 2 integers to add");
-                    var addNumber1 = Console.ReadLine();
-                    var addNumber2 = Console.ReadLine();
+                    var success = Getnumbers("add", out int num1, out int num2);
+                    if (success == true)
 
-                    if (int.TryParse(addNumber1, out int addNumOne) && int.TryParse(addNumber2, out int addNumTwo))
                     {
-                        Console.Write($"{addNumber1} + {addNumber2} = ");
-                        Console.Write(calculator.Add(addNumOne, addNumTwo));
-                    }
-                    else
-                    {
-                        Console.WriteLine("One or more of the numbers is not an int");
+                        Console.Write($"{num1} + {num2} = ");
+                        Console.Write(calculator.Add(num1, num2));
                     }
                     break;
 
                 case "2":
-                    Console.WriteLine("Enter 2 integers to subtract");
-                    var subtractNumber1 = Console.ReadLine();
-                    var subtractNumber2 = Console.ReadLine();
+                    success = Getnumbers("add", out int subnum1, out int subnum2);
+                    if (success == true)
 
-                    if (int.TryParse(subtractNumber1, out int subNumOne) && int.TryParse(subtractNumber2, out int subNumTwo))
                     {
-                        Console.Write($"{subtractNumber1} - {subtractNumber2} = ");
-                        Console.Write(calculator.Subtract(subNumOne, subNumTwo));
-                    }
-                    else
-                    {
-                        Console.WriteLine("One or more of the numbers is not an int");
+                        Console.Write($"{subnum1} - {subnum2} = ");
+                        Console.Write(calculator.Subtract(subnum1, subnum2));
                     }
                     break;
 
                 case "3":
-                    // Add code here
+                    success = Getnumbers("add", out int mulnum1, out int mulnum2);
+                    if (success == true)
+
+                    {
+                        Console.Write($"{mulnum1} * {mulnum2} = ");
+                        Console.Write(calculator.Multiply(mulnum1, mulnum2));
+                    }
                     break;
 
                 case "4":
-                    Console.WriteLine("Enter 2 integers to divide");
-                    var divideNumber1 = Console.ReadLine();
-                    var divideNumber2 = Console.ReadLine();
+                    success = Getnumbers("add", out int divnum1, out int divnum2);
+                    if (success == true)
 
-                    if (double.TryParse(divideNumber1, out double divNumOne) && double.TryParse(divideNumber2, out double divNumTwo))
                     {
-                        Console.Write($"{divideNumber1} / {divideNumber2} = ");
-                        Console.Write(calculator.Divide(divNumOne, divNumTwo));
-                    }
-                    else
-                    {
-                        Console.WriteLine("One or more of the numbers is not an int");
+                        Console.Write($"{divnum1} + {divnum2} = ");
+                        Console.Write(calculator.Divide(divnum1, divnum2));
                     }
                     break;
-                    break;
+
 
                 default:
                     Console.WriteLine("Unknown input");
