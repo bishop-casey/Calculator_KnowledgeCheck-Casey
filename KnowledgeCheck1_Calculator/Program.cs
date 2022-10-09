@@ -8,6 +8,28 @@ namespace KnowledgeCheck1_Calculator
 {
     class Program
     {
+        static bool Getnumbers(string CalFun, out int num1, out int num2)
+        {
+            Console.WriteLine("Enter 2 integers to " + CalFun);
+            var number1 = Console.ReadLine();
+            var number2 = Console.ReadLine();
+
+            if (int.TryParse(number1, out int num1temp) && int.TryParse(number2, out int num2temp))
+            {
+                num1 = num1temp;
+                num2 = num2temp;
+                return true;
+
+            }
+            else
+            {
+                Console.WriteLine("One or more of the numbers is not an int");
+                num1 = 0;
+                num2 = 0;
+                return false;
+
+            }
+        }
         static void Main(string[] args)
         {
 
